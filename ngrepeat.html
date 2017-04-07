@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+<head>
+	<title>AngularJS Directives and Data Binding Using ng-repeat</title>
+</head>
+<body data-ng-init="names=['Jonhy','Mukul','Ruchi','Sonakshi','Nikhil','Sudhanshu','Ankita']">
+Name:
+<br>
+<input type="text" data-ng-model="name" /> {{name}}
+<br>
+<ul>
+	<li data-ng-repeat="personName in names">{{ personName }}</li>
+</ul>
+</body>
+</html>

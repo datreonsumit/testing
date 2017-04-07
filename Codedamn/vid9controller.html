@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myLanguageApp">
+<head>
+	<meta charset="utf-8">
+	<title>Intro to controllers</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+<div ng-controller="languages">
+	Select your favourite language:
+	<button ng-click="Javascript()">Javascript</button>
+	<button ng-click="C()">C</button>
+	<button ng-click="NodeJs()">NodeJs</button>
+	<button ng-click="Scala()">Scala</button>
+	<p>You have selected: {{ myFavLanguage }}</p>
+</div>
+
+<script>
+	var application=angular.module('myLanguageApp',[]);
+	application.controller('languages', function($scope){
+
+		$scope.myFavLanguage = 'None';
+
+		$scope.Javascript = function(){
+			$scope.myFavLanguage='Javascript';
+		};
+		$scope.C = function(){
+			$scope.myFavLanguage='C';
+		};
+		$scope.NodeJs = function(){
+			$scope.myFavLanguage='NodeJs';
+		};
+		$scope.Scala = function(){
+			$scope.myFavLanguage='Scala';
+		};
+	});
+</script>
+
+</body>
+</html>
